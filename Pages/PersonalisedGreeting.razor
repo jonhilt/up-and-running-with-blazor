@@ -1,5 +1,5 @@
 <p>What's your name?</p>
-<input type="text"/>
+<input type="text" @bind-value="_name" @bind-value:event="oninput"/>
 
 <h1>Hello @_name</h1>
 

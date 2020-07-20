@@ -3,12 +3,13 @@
     <input type="text" @bind-value="_email"/>
 </label>
 
-<button>Submit</button>
+<button @onclick="HandleSubmit">Submit</button>
 
 @code {
     private string _email;
 
     private void HandleSubmit()
     {
+        Console.WriteLine($"Submitted! {_email}");
     }
 }

@@ -1,13 +1,14 @@
+@{
+  var borderStyle = $"border: {BorderStyle}";
+}
 
-<div class="card mt-4">
+<div class="card mt-4" style="@borderStyle">
   <div class="card-header">
      @Title
   </div>
   <div class="card-body">
-    <p class="card-text">Contents go here!</p>
+    <p class="card-text">@ChildContent</p>
   </div>
-
-  
 </div>
 
 @code {
@@ -15,4 +16,10 @@
   [Parameter]
   public string Title { get; set; }
 
+  [Parameter]
+  public RenderFragment  ChildContent { get; set; }
+
+  [Parameter]
+  public string BorderStyle { get; set; }
+  
 }

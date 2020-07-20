@@ -1,1 +1,23 @@
 ﻿@page "/"
+
+<ImportantPanel title="Hello world!">
+    <Greeting name="Jon"/>
+</ImportantPanel>
+
+<Panel title="Greeting 2">
+    <ChildContent>
+        <Greeting name="Alice"/>
+    </ChildContent>
+</Panel>
+
+<Panel title="Contact Us">
+    <EmailCapture/>
+</Panel>
+
+<Panel title="Contact Us (via an EditForm)">
+    <EmailEditForm/>
+</Panel>
+
+<Panel title="A more personal greeting">
+    <PersonalisedGreeting/>
+</Panel>

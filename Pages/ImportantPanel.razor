@@ -1,0 +1,7 @@
+<Panel @attributes="Attributes" borderStyle="1px solid red"/>
+
+@code
+{
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> Attributes { get; set; }
+}

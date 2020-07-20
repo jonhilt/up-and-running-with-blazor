@@ -1,10 +1,13 @@
+@using System.ComponentModel.DataAnnotations
 <EditForm Model="_model"
           OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
     <label>
         Your Email:
         <InputText id="email" @bind-Value="_model.Email"/>
     </label>
     <button type="submit">Submit!</button>
+    <ValidationSummary />
 </EditForm>
 
 @code
@@ -18,6 +21,7 @@
     
     private class EmailForm
     {
+        [Required]
         public string Email { get; set; }
     }
 }
