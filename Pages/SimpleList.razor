@@ -1,0 +1,23 @@
+@page "/people"
+
+<ul>
+    @foreach (var person in _people)
+    {
+        <li>@person.Title @person.Name</li>
+    }
+</ul>
+
+@code {
+
+    private Person[] _people = new Person[] 
+        { 
+            new Person{ Name = "Jon", Title = "Mr"},
+            new Person{ Name = "Alice", Title = "Mrs"},
+        };
+
+    public class Person {
+        public string Name { get; set; }
+        public string Title { get; set; }
+    }
+
+}

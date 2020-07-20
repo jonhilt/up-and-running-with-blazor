@@ -1,0 +1,23 @@
+<EditForm Model="_model"
+          OnValidSubmit="HandleValidSubmit">
+    <label>
+        Your Email:
+        <InputText id="email" @bind-Value="_model.Email"/>
+    </label>
+    <button type="submit">Submit!</button>
+</EditForm>
+
+@code
+{
+    private readonly EmailForm _model = new EmailForm();
+
+    public void HandleValidSubmit()
+    {
+        Console.WriteLine($"It's valid: {_model.Email}");
+    }
+    
+    private class EmailForm
+    {
+        public string Email { get; set; }
+    }
+}
